@@ -1,0 +1,9 @@
+.heading{
+    background-color: blue;
+    color: red;
+    border: 2px solid black;
+}
+.one{
+    padding: 5px;
+    margin: 5px;
+}
