@@ -22,13 +22,71 @@
 
 // -----------------------more dom------------
 
-const h1=document.querySelector('h1');
-console.log(h1.classList);
-h1.classList.add('heading');//add
-console.log(h1.classList);
-h1.classList.add('one');
-h1.classList.remove('heading'); //remove
-console.log(h1.classList);
-console.log(h1.classList.contains('heading')) //false
+// const h1=document.querySelector('h1');
+// console.log(h1.classList);
+// h1.classList.add('heading');//add
+// console.log(h1.classList);
+// h1.classList.add('one');
+// h1.classList.remove('heading'); //remove
+// console.log(h1.classList);
+// console.log(h1.classList.contains('heading')) //false
 
 // h1.classList.toggle() //used to toggle if added then remove, if removed then add
+
+
+
+
+
+// ------------------------------------------
+
+// const b=document.querySelector("p b");
+// console.log(b);
+
+// console.log(b.parentElement)
+// console.log(b.parentElement.parentElement)
+// console.log(b.parentElement.parentElement.parentElement)
+// console.log(b.parentElement.parentElement.parentElement.parentElement)
+
+// -------------------------------------------
+// const img=document.querySelector("img")
+// console.log(img.previousElementSibling);
+// console.log(img.nextElementSibling);
+
+
+// ---------------------creating element dynimacally--------------
+
+// const strong=document.createElement('strong');
+// strong.innerText='this is  strong tag created dynimacally'
+// const p=document.querySelector('p');
+// p.appendChild(strong)
+
+
+// const em=document.createElement('em');
+// em.innerText='hello i am em!!'
+//  p.append(em)
+
+// ---------------------------------------
+
+// const input=document.querySelector('input[type="text"]');
+// console.log(input);
+// input.value="setted useername"
+// console.log(input.value);
+
+
+// --------------------reove element  dynimically----------------------
+
+const b=document.querySelector('b')
+const para=document.querySelector('p')
+para.removeChild(b);
+// -------------------------------
+
+const li=document.querySelector('ul li:first-child')
+const ul=document.querySelector('ul')
+
+ul.removeChild(li);
+
+// or
+const lastli=document.querySelector('ul li:last-child')
+lastli.remove()
+
+
