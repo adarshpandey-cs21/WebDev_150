@@ -1,0 +1,4 @@
+1 . there are two ways to convert buffer one is passing encoding 
+    utf-8 in object and the other is using .toString() method.
+
+2.npm init -y //-y is used to set everything as byDefault 
