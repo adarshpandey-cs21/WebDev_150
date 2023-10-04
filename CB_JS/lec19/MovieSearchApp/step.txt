@@ -1,0 +1,10 @@
+select form and list using dom
+add eventlistener on form submit
+read input text in form
+call getmovies pasing argument inputtext function and set form value empty
+getmovie function created
+set url from api
+use axis to get data from given url api
+getting data and iterate over them to create new elemnt image set its src to recieved data
+append image to list
+clear the list before loading new data(without refreshing the page) 
