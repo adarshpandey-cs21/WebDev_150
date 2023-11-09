@@ -1,0 +1,43 @@
+ show databases/dbs
+ use gla ---------------------open/create new db
+ db---------------------------show current working dbs
+
+till there is no collection in dbs then it doesnot show dbs in list of show databases command;
+
+db.createCollection('Movies') -------create collection in current databases
+ show collections
+ db.dropDatabase()--------never use this
+
+
+
+
+ CRUD:------------------------------------------------------------------------------
+  all crud method accept object
+
+db.movies.insertOne({name:"Bahubali",year:2015,imdb:9,isWatched:true})-----insert one document in collection
+db.movies.find() ---only exception method which may or may not take object and return all the documents from collections
+db.movies.find({})--- return all the documents from collections
+ db.movies.insertMany([{},{},{}])-----insert many documents at one time
+
+ rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr----------------------------------------------
+ db.movies.find({isWatched:true,imdb:9})-------return speciefied movies
+
+ uuuuuuuuuuuuuuuuuuuuuuuuuu------------------------------------------------------------------
+ $set is operator which always accept object
+ db.movies.updateOne({},{$set:{}})-----update one movie who will match first---it accept two object one to find which document you want to change and second what changes you want to make
+
+ db.movies.updateMany({isWatched:true},{$set:{imdb:22}})---update all the matching criteria 
+
+dddddddddddddddddddddddddddddddddddddddddddd-----------------------------
+db.movies.deleteOne({})----delete one document in case of emptyObject-- you can also give condition in it
+db.movies.deleteMany({})-------delete all-- you can also give condition in it
+
+
+
+
+OPERATOR-------------------------------------------------------------
+
+
+db.movies.find({imdb:{$gt:5}})-------------greater than
+ db.movies.find({imdb:{$gte:5}})-----------greater than equal to
+ db.movies.find({imdb:{$in:[5,10]}})----------
